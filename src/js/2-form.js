@@ -16,9 +16,10 @@ function initializeForm() {
     }
     
     form.addEventListener('input', (event) => {
-        
+
         formData.email = event.target.name === 'email' ? event.target.value : formData.email;
         formData.message = event.target.name === 'message' ? event.target.value : formData.message;
+        console.log(formData);
         localStorage.setItem('feedback-form-state', JSON.stringify(formData));
     });
 
